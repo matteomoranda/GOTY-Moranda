@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>GOTY 2021</title>
+        <link rel="stylesheet" href="stile.css">
+        <link rel="icon" type="image/x-icon" href="immagini\GOTY-logo.png">
+    </head>
+    <body>
+        <header>
+            <h1>GOTY 2021</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="GOTY2020.html">2020</a>
+                <a href="GOTY2021.html" class="active">2021</a>
+                <a href="GOTY2022.html">2022</a>
+                <a href="GOTY2023.html">2023</a>
+                <a href="GOTY2024.html">2024</a>
+                <a href="GOTY2025.html">2025</a>
+            </nav>
+        </header>
+        <main>
+            <div class="card">
+                <h2><b>Vincitore:</b> It Takes Two</h2>
+                <img src="immagini/itTakes2.jpg" alt="It Takes Two" width="300" style="float:left; margin:10px" ><br>
+                <p style="font-size:20px"><b>Data di rilascio:</b> 26 marzo 2021<br><br>
+                    <b>Genere:</b> Avventura dinamica, Platform, Puzzle, Co-op<br><br>
+                    <b>Tema:</b> Fantasy, Azione <br><br>
+                    <b>Sviluppo:</b> Hazelight Studios<br><br>
+                    <b>Pubblicazione:</b> Electronic Arts<br><br>
+                    <b>Descrizione:</b> Un capolavoro cooperativo costruito interamente attorno alla collaborazione obbligata.
+                    Ogni livello introduce meccaniche nuove, senza mai riciclare idee.
+                    Il gameplay è costantemente al servizio della narrazione e dei personaggi.
+                    Il tono leggero nasconde un racconto sorprendentemente umano e sincero.
+                    La varietà è incredibile e mantiene l’esperienza sempre fresca.
+                    Un punto di riferimento assoluto per il gioco cooperativo moderno.
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="card">	
+                <h2 style="text-align: center"><b><i>Altri candidati:</i></b></h2>
+
+                <div class="slideshow-js">
+
+                    <div class="slide-container">
+                        <img src="immagini/deathloop.webp" alt="Deathloop" class="slide">
+                        <div class="description">
+                            <p style="font-size:20px">
+                                <b><i>Deathloop</i></b><br><br>
+                                Gioco d’azione in stile assassino con loop temporale.
+                                Affronta nemici unici, pianifica strategie e scopri segreti nascosti.
+                                Un’esperienza intensa di puzzle e combattimento.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide-container">
+                        <img src="immagini/metroid.avif" alt="Metroid Dread" class="slide">
+                        <div class="description">
+                            <p style="font-size:20px">
+                                <b><i>Metroid Dread</i></b><br><br>
+                                Esplora pianeti alieni e affronta nemici letali.
+                                Un’avventura platform con combattimenti tattici e segreti nascosti.
+                                Azione e mistero in un mondo sci-fi affascinante.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide-container">
+                        <img src="immagini/psycho.png" alt="Psychonauts 2" class="slide">
+                        <div class="description">
+                            <p style="font-size:20px">
+                                <b><i>Psychonauts 2</i></b><br><br>
+                                Avventure psichedeliche in un mondo fantastico.
+                                Risolvi enigmi e scopri i pensieri dei personaggi.
+                                Gameplay creativo e scenari pieni di colore e umorismo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide-container">
+                        <img src="immagini/r&c.jpg" alt="Ratchet & Clank: Rift Apart" class="slide">
+                        <div class="description">
+                            <p style="font-size:20px">
+                                <b><i>Ratchet & Clank: Rift Apart</i></b><br><br>
+                                Azione e platform intergalattici.
+                                Viaggia tra mondi diversi, affronta nemici con armi creative e goditi una storia divertente e dinamica.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide-container">
+                        <img src="immagini/Resident_Evil.jpg" alt="Resident Evil Village" class="slide">
+                        <div class="description">
+                            <p style="font-size:20px">
+                                <b><i>Resident Evil Village</i></b><br><br>
+                                Horror e sopravvivenza in un villaggio inquietante.
+                                Esplora ambienti terrificanti, affronta mostri spaventosi e risolvi enigmi.
+                                Un’esperienza intensa per gli amanti del genere survival horror.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dots-container" style="text-align:center; margin-top:10px;">
+                        <span class="dot" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+
+
+                    <button class="prev" onclick="prev()">❮</button>
+                    <button class="next" onclick="next()">❯</button>
+                </div>
+
+
+                <script>
+                    let index = 0;
+                    const slides = document.querySelectorAll('.slideshow-js .slide-container');
+                    const dots = document.querySelectorAll('.dot');
+
+                    function show() {
+                        slides.forEach((s, i) => s.style.display = i === index ? 'flex' : 'none');
+                        dots.forEach((d, i) => {
+                            d.classList.toggle('active', i === index);
+                        });
+                    }
+
+                    show();
+
+                    function next() {
+                        index = (index + 1) % slides.length;
+                        show();
+                    }
+
+                    function prev() {
+                        index = (index - 1 + slides.length) % slides.length;
+                        show();
+                    }
+
+                    function currentSlide(i) {
+                        index = i;
+                        show();
+                    }
+                </script>
+
+
+        </main>
+    </body>
+</html>
