@@ -613,3 +613,113 @@ opacity: 1;
 filter: brightness(1.1);
 z-index: 10;
 }
+
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* TESTI */
+  .card.intro h2 {
+    font-size: 22px;
+  }
+
+  .card.intro p,
+  .card.intro ul li {
+    font-size: 15px;
+  }
+
+  /* GRID CANDIDATI */
+  .altriCandidati {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .altriCandidati img,
+  #descrizione,
+  .flip-card,
+  .game-card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: auto;
+  }
+
+  /* FLIP CARD */
+  .flip-card {
+    height: 350px;
+  }
+
+  /* GAME CARD */
+  .game-card {
+    height: 350px;
+  }
+
+  .game-card:hover {
+    transform: scale(1.05);
+  }
+
+  /* SLIDESHOW */
+  .slide-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slide-container .slide,
+  .description {
+    width: 100%;
+  }
+
+  .slide-container .slide {
+    max-height: 250px;
+  }
+
+  /* CAROUSEL */
+  .carousel-track {
+    height: 250px;
+  }
+
+  .carousel-el img {
+    height: 250px;
+  }
+
+  /* STACK CARD */
+  .stack-card img {
+    height: 250px;
+  }
+
+  .stack-card {
+    margin-top: -80px;
+  }
+
+  /* POPUP */
+  .popup {
+    width: 90%;
+  }
+
+  /* VALUTAZIONE */
+  .valutazione {
+    justify-content: center;
+  }
+
+  .valutazione label {
+    font-size: 2rem;
+  }
+
+  /* TITOLI */
+  #grazie {
+    font-size: 22px;
+  }
+}
